@@ -8,26 +8,26 @@ let deals = [
 {
     id: 2,
     name: "Pygmy Goats",
-    imageUrl: "/public/images/goat.jpg",
+    imageUrl: "/images/goat.jpg",
     price: 50
 },
 
 {
     id: 3,
     name: "Plymouth Barred Rocks",
-    imageUrl: "/public/images/chicken.jpg",
+    imageUrl: "/images/chicken.jpg",
     price: 10
 },
 {
     id: 4,
     name: "Toulouse Goose",
-    imageUrl:"/public/images/goose.jpg",
+    imageUrl:"/images/goose.jpg",
     price: 75
 },
 {
     id: 5,
     name: "Black Soldier Fly (per lb)",
-    imageUrl: "/public/images/fly.jpg",
+    imageUrl: "/images/fly.jpg",
     price: 20
 }
 ]
