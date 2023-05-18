@@ -4,7 +4,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.get('*', express.static(__dirname + "/"))
+app.get('*', express.static(__dirname + "/public/index.html"))
 
 const {getDeals} = require("./controller")
 
