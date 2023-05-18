@@ -50,19 +50,24 @@ getDeals()
 
 const addNewEmail = (e) => {
     e.preventDefault()
-    axios.post(`/emailList`, {
+    console.log("axios post values changed")
+    if (!emailInput.value) {
+        alert("Please add email")
+} else {
+    alert("Thank you for joining the family!")
+}
+    axios.post(`/emails`, {
         email: emailInput.value,
         receiveUpdates: checkbox.value
     })
     .then((response) => {
-        rollbar.warning("values did not change")
        (emailInput.value = ""),
        (checkbox.value = "")
        console.log(response.data)
-
-    })
+    }
+    )
     .catch((error) => {
-        console.log("Error", error)
+        console.log("Error adding email", error)
     })
 
 }

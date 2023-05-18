@@ -1,7 +1,7 @@
 // include and initialize the rollbar library with your access token
 var Rollbar = require('rollbar')
 var rollbar = new Rollbar({
-  accessToken: '31cfbd0a29374ebea5dd7e3756162a1f',
+  accessToken: process.env.ROLLBAR_ACCESS_TOKEN,
   captureUncaught: true,
   captureUnhandledRejections: true,
 })
@@ -43,7 +43,7 @@ let deals = [
 }
 ]
 
-let emailList = [
+let emails = [
 {
     id: 1,
     email: "thisemail@email.com",
@@ -57,7 +57,7 @@ let emailId = 2;
 try{
     nonExistentFunction()
 } catch (error) {
-    rollbar.error("error")
+    rollbar.critical("error")
 }
 
 const getDeals = (req, res) => {
@@ -72,16 +72,10 @@ const addEmail = (req, res) => {
         receiveUpdates,
         id: emailId
     }
-    if (email.value === "") {
-        rollbar.warning("Value of email is empty")
-        alert("Please add email")
-    } else {
-    emailList.push(newEmail)
+ 
+    emails.push(newEmail)
     rollbar.info("email added to list")
-    res.status(200).send(() => {
-        rollbar.info("email successfully added")
-        alert("Thank you for joining the family!")
-    })}
+    res.sendStatus(200)
     emailId++
 }
 
