@@ -11,14 +11,7 @@
 
     <nav>
         <h1>Welcome to the Farm!</h1>
-        <form id="email-container">
-            <h2>Join our Mailing List</h2>
-            <label>Email:</label>
-            <input class="email-input"type="email" placeholder="Enter your email..."/>
-            <label>Receive Updates:</label>
-            <input class="checkbox" type="checkbox"/>
-            <button class="email-btn">Add</button>
-        </form>
+   
         <img id="logo" src="./images/logo.png"/>
         <div class="anchors">
         <a>Home</a>
@@ -26,9 +19,20 @@
         <a>Cart <img class="cart" src="./images/cart.png"/></a>
         </div>
       </nav>
-    
+      <form id="email-container">
+
+        <h2 class="email-title">Join our Mailing List</h2>
+        <div class="email-parent">
+        <label>Email:</label>
+        <input class="email-input"type="email" placeholder="Enter your email..."/>
+        <label>Receive Updates:</label>
+        <input class="checkbox" type="checkbox"/>
+    </div>
+    <button class="email-btn">Add</button>
+     </form>
 </header>
 <body>
+    
    <section class="about">
     <h1>About the Farm Fam...</h1>
      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
@@ -52,7 +56,8 @@
           id porta nibh venenatis cras. At urna condimentum mattis pellentesque. Aenean vel elit scelerisque
            mauris pellentesque pulvinar pellentesque. Eget nunc lobortis mattis aliquam faucibus purus. </p>
    </section>
-   <span class="title">Hot Deals:</span>
+  
+    <span class="title">Hot Deals:</span>
    <section id="deal-section">
 
    </section>

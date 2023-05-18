@@ -117,3 +117,50 @@ p {
 footer {
  background-color: rgba(234, 234, 248, 0.885);   
 }
+
+#email-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+    float: right;
+    margin-top: -150px;
+
+
+}
+.email-title {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: fantasy;
+}
+
+label {
+    font-size: 20px;
+    font-family: fantasy;
+}
+ .email-parent {
+    display: flex;
+    flex-direction: row;
+    width: 470px;
+    justify-content: space-around;
+    margin-top: -20px;
+
+ }
+
+ .checkbox {
+   height: 20px;
+   width: 20px;
+ }
+
+ .email-input {
+    width: 200px;
+    border-radius: 20px;
+ }
+
+ .email-btn {
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    margin-top: 20px;
+ }
