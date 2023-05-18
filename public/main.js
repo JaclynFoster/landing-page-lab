@@ -1,5 +1,8 @@
 let dealContainer = document.querySelector("#deal-section")
-let bodyContainer = document.querySelector("body")
+let emailContainer = document.querySelector("#email-container")
+let emailInput = document.querySelector(".email-input")
+let checkbox = document.querySelector(".checkbox")
+let emailBtn = document.querySelector(".email-btn")
 
 const baseURL = "http://34.203.205.252:4500/"
 
@@ -42,3 +45,26 @@ const getDeals = () => {
     })
 }
 getDeals()
+
+
+
+const addNewEmail = (e) => {
+    e.preventDefault()
+    axios.post(`/emailList`, {
+        email: emailInput.value,
+        receiveUpdates: checkbox.value
+    })
+    .then((response) => {
+        rollbar.warning("values did not change")
+       (emailInput.value = ""),
+       (checkbox.value = "")
+       console.log(response.data)
+
+    })
+    .catch((error) => {
+        console.log("Error", error)
+    })
+
+}
+
+emailContainer.addEventListener("submit", addNewEmail)

@@ -113,3 +113,7 @@ p {
     color: rgb(133, 53, 53);
     padding-top: 10px;
 }
+
+footer {
+ background-color: rgba(234, 234, 248, 0.885);   
+}
